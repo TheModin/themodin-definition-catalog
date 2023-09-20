@@ -15,7 +15,7 @@ name: VSCodeAndNode
 # MicrosoftWindowsDesktop_windows-ent-cpc_win10-21h2-ent-cpc-m365-g2
 # MicrosoftWindowsDesktop_windows-ent-cpc_20h2-ent-cpc-m365-g2
 
-image: microsoftwindowsdesktop_windows-ent-cpc_win11-21h2-ent-cpc-m365
+image: microsoftwindowsdesktop_windows-ent-cpc_win11-22h2-ent-cpc-m365
 
 # Set VM Size, available skus 2023-09-20:
 # general_i_8c32gb256ssd_v2
@@ -35,10 +35,4 @@ hostInformation: general_i_8c32gb512ssd_v2
 setupTasks:
   - task: winget
     inputs:
-      package: Microsoft.VisualStudioCode.Insiders
-  - task: winget
-    inputs:
-      package: OpenJS.NodeJS.LTS
-  - task: winget
-    inputs:
-      package: azd
+      package: Microsoft.PowerToys
