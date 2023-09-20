@@ -1,4 +1,4 @@
-name: VSCodeAndNode
+name: PowerToys
 
 # Set the image, available images 2023-09-20:
 # microsoftvisualstudio_visualstudioplustools_vs-2022-ent-general-win11-m365-gen2
@@ -36,3 +36,6 @@ setupTasks:
   - task: winget
     inputs:
       package: Microsoft.PowerToys
+  - task: powershell
+    inputs:
+      command: 
