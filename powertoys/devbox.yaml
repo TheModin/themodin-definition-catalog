@@ -36,6 +36,21 @@ setupTasks:
   - task: winget
     inputs:
       package: Microsoft.PowerToys
+  - task: winget
+    inputs:
+      package: Microsoft.Azd
+  - task: winget
+    inputs:
+      package: Microsoft.AzureCLI
+  - task: winget
+    inputs:
+      package: Microsoft.VisualStudioCode.Insiders
   - task: powershell
     inputs:
       command: mkdir C:\\src
+  - task: install-vs-extension
+    inputs:
+      marketplaceItemName: ms-vscode.powershell
+  - task: install-vs-extension
+    inputs:
+      marketplaceItemName: GitHub.copilotvs
