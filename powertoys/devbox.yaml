@@ -38,4 +38,4 @@ setupTasks:
       package: Microsoft.PowerToys
   - task: powershell
     inputs:
-      command: 
+      command: mkdir C:\\src
