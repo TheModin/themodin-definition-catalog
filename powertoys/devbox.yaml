@@ -1,3 +1,6 @@
+# Command to commit, push and sync catalog:
+# git add . && git commit -a -m "powertoys-preview" && git push && az devcenter admin catalog sync --name "themodin-definition-catalog" --dev-center-name "build-2023-devcenter" --resource-group "devbox-rg"
+
 name: PowerToys
 
 # Set the image, available images 2023-09-20:
@@ -32,6 +35,10 @@ image: microsoftvisualstudio_visualstudioplustools_vs-2022-ent-general-win11-m36
 # general_a_32c128gb2048ssd_v2
 
 hostInformation: general_i_8c32gb512ssd_v2
+
+# Configure hybernation
+supportsHibernation: true
+
 setupTasks:
   - task: winget
     inputs:
