@@ -18,7 +18,7 @@ name: PowerToys
 # MicrosoftWindowsDesktop_windows-ent-cpc_win10-21h2-ent-cpc-m365-g2
 # MicrosoftWindowsDesktop_windows-ent-cpc_20h2-ent-cpc-m365-g2
 
-image: microsoftvisualstudio_visualstudioplustools_vs-2022-ent-general-win11-m365-gen2
+image: MicrosoftWindowsDesktop_windows-ent-cpc_win11-22h2-ent-cpc-m365
 
 # Set VM Size, available skus 2023-09-20:
 # general_i_8c32gb256ssd_v2
@@ -34,7 +34,7 @@ image: microsoftvisualstudio_visualstudioplustools_vs-2022-ent-general-win11-m36
 # general_a_32c128gb1024ssd_v2
 # general_a_32c128gb2048ssd_v2
 
-hostInformation: general_i_8c32gb512ssd_v2
+hostInformation: general_i_8c32gb256ssd_v2
 
 # Configure hybernation
 supportsHibernation: true
