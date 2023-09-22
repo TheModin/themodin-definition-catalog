@@ -1,7 +1,4 @@
-# Command to commit, push and sync catalog:
-# git add . && git commit -a -m "powertoys-preview" && git push && az devcenter admin catalog sync --name "themodin-definition-catalog" --dev-center-name "build-2023-devcenter" --resource-group "devbox-rg" --verbose
-#
-name: PowerToys
+name: build2023
 
 # Set the image, available images 2023-09-20:
 # microsoftvisualstudio_visualstudioplustools_vs-2022-ent-general-win11-m365-gen2
@@ -18,7 +15,7 @@ name: PowerToys
 # MicrosoftWindowsDesktop_windows-ent-cpc_win10-21h2-ent-cpc-m365-g2
 # MicrosoftWindowsDesktop_windows-ent-cpc_20h2-ent-cpc-m365-g2
 
-image: MicrosoftWindowsDesktop_windows-ent-cpc_win11-22h2-ent-cpc-m365
+image: microsoftwindowsdesktop_windows-ent-cpc_win11-22h2-ent-cpc-m365
 
 # Set VM Size, available skus 2023-09-20:
 # general_i_8c32gb256ssd_v2
@@ -35,39 +32,13 @@ image: MicrosoftWindowsDesktop_windows-ent-cpc_win11-22h2-ent-cpc-m365
 # general_a_32c128gb2048ssd_v2
 
 hostInformation: general_i_8c32gb256ssd_v2
-
-# Configure hybernation
-supportsHibernation: true
-
 setupTasks:
-  - task: install-by-uri
-    inputs:
-      package: 'https://community.chocolatey.org/install.ps1'
-  - task: choco
-    inputs:
-      package: dotnet
   - task: winget
     inputs:
-      package: "PowerToys (Preview)"
+      package: "7-Zip"
   - task: winget
     inputs:
-      package: "Azure Developer CLI"
+      package: OpenJS.NodeJS.LTS
   - task: winget
     inputs:
-      package: Microsoft.AzureCLI
-  - task: winget
-    inputs:
-      package: "Microsoft Visual Studio Code Insiders"
-  - task: powershell
-    inputs:
-      command: mkdir C:\\src
-  - task: powershell
-    inputs:
-      command: Get-Date | Out-File -FilePath .\date.txt
-      workingDirectory: C:\\src
-  - task: install-vs-extension
-    inputs:
-      marketplaceItemName: ms-vscode.powershell
-  - task: install-vs-extension
-    inputs:
-      marketplaceItemName: GitHub.copilotvs
+      package: azd
