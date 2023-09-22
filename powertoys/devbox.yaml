@@ -1,5 +1,5 @@
 # Command to commit, push and sync catalog:
-# git add . && git commit -a -m "powertoys-preview" && git push && az devcenter admin catalog sync --name "themodin-definition-catalog" --dev-center-name "build-2023-devcenter" --resource-group "devbox-rg --verbose"
+# git add . && git commit -a -m "powertoys-preview" && git push && az devcenter admin catalog sync --name "themodin-definition-catalog" --dev-center-name "build-2023-devcenter" --resource-group "devbox-rg" --verbose
 
 name: PowerToys
 
