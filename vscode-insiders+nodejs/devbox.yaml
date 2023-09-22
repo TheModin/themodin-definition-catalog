@@ -42,4 +42,5 @@ setupTasks:
       package: OpenJS.NodeJS.LTS
   - task: winget
     inputs:
-      package: azd
+      package: "Azure Developer CLI"
+      runAsUser: true
