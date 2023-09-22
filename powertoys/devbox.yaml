@@ -61,6 +61,10 @@ setupTasks:
   - task: powershell
     inputs:
       command: mkdir C:\\src
+  - task: powershell
+    inputs:
+      command: Get-Date | Out-File -FilePath .\date.txt
+      workingDirectory: C:\\src
   - task: install-vs-extension
     inputs:
       marketplaceItemName: ms-vscode.powershell
