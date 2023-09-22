@@ -36,6 +36,7 @@ setupTasks:
   - task: winget
     inputs:
       package: Microsoft.VisualStudioCode.Insiders
+      runAsUser: true
   - task: winget
     inputs:
       package: OpenJS.NodeJS.LTS
