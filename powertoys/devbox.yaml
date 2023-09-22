@@ -48,7 +48,7 @@ setupTasks:
       package: dotnet
   - task: winget
     inputs:
-      package: Microsoft.PowerToys
+      package: PowerToys
   - task: winget
     inputs:
       package: Microsoft.Azd
